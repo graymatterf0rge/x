@@ -2,6 +2,9 @@
 .thumbs.db
 node_modules
 
+# Generated Files
+.jest-test-results.json
+
 # Quasar core related directories
 .quasar
 /dist

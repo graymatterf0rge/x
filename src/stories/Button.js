@@ -1,4 +1,6 @@
-import MyButton from './Button.vue';
+import { expect } from '@storybook/jest'
+import { within, userEvent } from '@storybook/testing-library'
+import MyButton from '../components/Button.vue'
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
@@ -7,7 +9,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-    onClick: {},
+    onClick: { action: true },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -33,6 +35,11 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
+Primary.play = async ({ args, canvasElement }) => {
+  const canvas = within(canvasElement);
+  await userEvent.click(canvas.getByRole('button'));
+  await expect(args.onClick).toHaveBeenCalled();
+}
 
 export const Secondary = Template.bind({});
 Secondary.args = {
