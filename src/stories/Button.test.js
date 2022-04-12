@@ -1,6 +1,6 @@
 import { render } from '@testing-library/vue'
 import { composeStories } from '@storybook/testing-vue3'
-import * as Stories from '../stories/Button'
+import * as Stories from './Button.stories'
 
 const { Primary } = composeStories(Stories)
 
