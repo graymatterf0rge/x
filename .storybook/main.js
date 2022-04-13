@@ -28,6 +28,7 @@ module.exports = {
     "builder": "@storybook/builder-vite"
   },
   "features": {
+    "buildStoriesJson": true,
     "interactionsDebugger": true,
   },
 }
