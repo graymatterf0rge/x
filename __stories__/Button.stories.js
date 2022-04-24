@@ -1,6 +1,10 @@
 import { expect } from '@storybook/jest'
+import { axe, toHaveNoViolations } from 'jest-axe'
 import { within, userEvent } from '@storybook/testing-library'
-import MyButton from '../components/Button.vue'
+import MyButton from '../src/components/Button.vue'
+
+expect.extend(toHaveNoViolations)
+
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
@@ -39,6 +43,7 @@ Primary.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
   await expect(args.onClick).toHaveBeenCalled();
+  //await expect(canvas).toHaveNoViolations();
 }
 
 export const Secondary = Template.bind({});
