@@ -11,6 +11,7 @@
 
 const { configure } = require('quasar/wrappers');
 const path = require('path');
+const AutoImport = require('unplugin-auto-import/vite')
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -86,6 +87,25 @@ module.exports = configure(function (/* ctx */) {
 
           // you need to set i18n resource including paths !
           include: path.resolve(__dirname, './src/i18n/**')
+        }],
+        ['AutoImport', {
+          // targets to transform
+          include: [
+            /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+            /\.vue$/, /\.vue\?vue/, // .vue
+            /\.md$/, // .md
+          ],
+
+          // global imports to register
+          imports: [
+            // presets
+            'vue'
+          ],
+          eslintrc: {
+            enabled: false, // Default `false`
+            filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+            globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+          },
         }]
       ]
     },

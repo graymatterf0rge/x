@@ -14,14 +14,15 @@ module.exports = {
     });
   },
   "stories": [
-    "../src/stories/*.stories.mdx",
-    "../src/stories/*.stories.js"
+    "../__stories__/*.stories.mdx",
+    "../__stories__/*.stories.js"
   ],
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-jest"
+    "@storybook/addon-jest",
+    "@storybook/addon-a11y",
   ],
   "framework": "@storybook/vue3",
   "core": {

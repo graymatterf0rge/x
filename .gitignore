@@ -4,6 +4,7 @@ node_modules
 
 # Generated Files
 .jest-test-results.json
+__snapshots__
 
 # Quasar core related directories
 .quasar
