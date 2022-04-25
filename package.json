@@ -30,6 +30,7 @@
     "@etchteam/storybook-addon-status": "^4.2.1",
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
     "@quasar/app-vite": "^1.0.0-alpha.0",
+    "@quasar/quasar-app-extension-qcalendar": "^4.0.0-beta.15",
     "@storybook/addon-a11y": "^6.4.22",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
