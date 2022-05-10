@@ -111,6 +111,7 @@ module.exports = configure(function ( ctx ) {
       // viteVuePluginOptions: {},
 
       vitePlugins: [
+<<<<<<< HEAD
         [
           '@intlify/vite-plugin-vue-i18n', {
             // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
@@ -121,6 +122,34 @@ module.exports = configure(function ( ctx ) {
           },
           'Unocss', {}
         ]
+=======
+        ['@intlify/vite-plugin-vue-i18n', {
+          // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
+          // compositionOnly: false,
+
+          // you need to set i18n resource including paths !
+          include: path.resolve(__dirname, './src/i18n/**')
+        }],
+        ['AutoImport', {
+          // targets to transform
+          include: [
+            /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+            /\.vue$/, /\.vue\?vue/, // .vue
+            /\.md$/, // .md
+          ],
+
+          // global imports to register
+          imports: [
+            // presets
+            'vue'
+          ],
+          eslintrc: {
+            enabled: false, // Default `false`
+            filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+            globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+          },
+        }]
+>>>>>>> a90e4b6b42bae3c32c434aa19576b8e9cf17571d
       ]
     },
 
