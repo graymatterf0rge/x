@@ -8,11 +8,26 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
+const UnoCSS = require('unocss/vite').default
+const Components = require('unplugin-vue-components/vite')
+const AutoImport = require('unplugin-auto-import/vite')
+const { presetAttributify, presetUno } = require('unocss')
+const { configure } = require('quasar/wrappers')
+const Icons = require('unplugin-icons/vite').default
+const { FileSystemIconLoader } = require('unplugin-icons/loaders')
+const IconsResolver = require('unplugin-icons/resolver')
+const path = require('path')
+const fs = require('fs')
 
-const { configure } = require('quasar/wrappers');
-const path = require('path');
+const DynamicComponentResolver = name => {
+  const file = path.resolve(__dirname, `src/components/${name}.vue`)
 
-module.exports = configure(function (/* ctx */) {
+  if (fs.existsSync(file)) {
+    return `src/components/${name}.vue`
+  }
+}
+
+module.exports = configure(function ( ctx ) {
   return {
     eslint: {
       // fix: true,
@@ -32,6 +47,7 @@ module.exports = configure(function (/* ctx */) {
     boot: [
       'i18n',
       'axios',
+      'unocss'
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
@@ -75,18 +91,36 @@ module.exports = configure(function (/* ctx */) {
       // minify: false,
       // polyfillModulePreload: true,
       // distDir
-
-      // extendViteConf (viteConf) {},
+      alias: {
+        'layouts': path.join(__dirname, './src/layouts')
+      },
+      extendViteConf (viteConf, { isClient, isServer }) {
+        viteConf.plugins.push(
+          ...UnoCSS({
+            presets: [
+              presetUno(),
+              presetAttributify(),
+            ]
+          }),
+          AutoImport({
+            resolvers: [ DynamicComponentResolver ]
+          }),
+          Components({})
+        )
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [
-        ['@intlify/vite-plugin-vue-i18n', {
-          // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
-          // compositionOnly: false,
+        [
+          '@intlify/vite-plugin-vue-i18n', {
+            // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
+            // compositionOnly: false,
 
-          // you need to set i18n resource including paths !
-          include: path.resolve(__dirname, './src/i18n/**')
-        }]
+            // you need to set i18n resource including paths !
+            include: path.resolve(__dirname, './src/i18n/**')
+          },
+          'Unocss', {}
+        ]
       ]
     },
 
@@ -102,7 +136,9 @@ module.exports = configure(function (/* ctx */) {
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
-
+      alias: {
+        myalias: path.join(__dirname, './src/somefolder')
+      },
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:

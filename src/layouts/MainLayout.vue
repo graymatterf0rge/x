@@ -25,9 +25,7 @@
       bordered
     >
       <q-list>
-        <q-item-label
-          header
-        >
+        <q-item-label class="text-green-400 test-class">
           Essential Links
         </q-item-label>
 
@@ -47,7 +45,6 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
@@ -96,11 +93,6 @@ const linksList = [
 
 export default defineComponent({
   name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
   setup () {
     const leftDrawerOpen = ref(false)
 
