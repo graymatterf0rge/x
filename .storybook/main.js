@@ -1,4 +1,6 @@
 const { mergeConfig } = require('vite')
+const Unocss = require('unocss/vite');
+
 module.exports = {
   async viteFinal(config, { configType }) {
     // return the customized config

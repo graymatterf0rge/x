@@ -1,9 +1,7 @@
 import { expect } from '@storybook/jest'
-import { axe, toHaveNoViolations } from 'jest-axe'
 import { within, userEvent } from '@storybook/testing-library'
 import MyButton from '../src/components/Button.vue'
 
-expect.extend(toHaveNoViolations)
 
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
@@ -13,7 +11,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-    onClick: { action: true },
+    onClick: { action: 'clicked' },
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
@@ -23,14 +21,13 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
-  // Components used in your story `template` are defined in the `components` object
-  components: { MyButton },
+  components: MyButton,
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<MyButton data-testid="button" v-bind="args" />',
 });
 
 export const Primary = Template.bind({});
@@ -43,7 +40,6 @@ Primary.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
   await expect(args.onClick).toHaveBeenCalled();
-  //await expect(canvas).toHaveNoViolations();
 }
 
 export const Secondary = Template.bind({});
