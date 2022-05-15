@@ -13,9 +13,9 @@ const Components = require('unplugin-vue-components/vite')
 const AutoImport = require('unplugin-auto-import/vite')
 const { presetAttributify, presetUno } = require('unocss')
 const { configure } = require('quasar/wrappers')
-const Icons = require('unplugin-icons/vite').default
-const { FileSystemIconLoader } = require('unplugin-icons/loaders')
-const IconsResolver = require('unplugin-icons/resolver')
+//const Icons = require('unplugin-icons/vite').default
+//const { FileSystemIconLoader } = require('unplugin-icons/loaders')
+//const IconsResolver = require('unplugin-icons/resolver')
 const path = require('path')
 const fs = require('fs')
 
@@ -103,15 +103,21 @@ module.exports = configure(function ( ctx ) {
             ]
           }),
           AutoImport({
+            include: [ /\.vue$/, /\.vue\?vue/], // .vue
+            imports: ['vue'],
             resolvers: [ DynamicComponentResolver ]
           }),
-          Components({})
+          Components(
+            {
+              extensions: ['vue'],
+              include: [/\.vue$/],
+            }
+          )
         )
       },
       // viteVuePluginOptions: {},
 
       vitePlugins: [
-<<<<<<< HEAD
         [
           '@intlify/vite-plugin-vue-i18n', {
             // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
@@ -119,37 +125,8 @@ module.exports = configure(function ( ctx ) {
 
             // you need to set i18n resource including paths !
             include: path.resolve(__dirname, './src/i18n/**')
-          },
-          'Unocss', {}
+          }
         ]
-=======
-        ['@intlify/vite-plugin-vue-i18n', {
-          // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
-          // compositionOnly: false,
-
-          // you need to set i18n resource including paths !
-          include: path.resolve(__dirname, './src/i18n/**')
-        }],
-        ['AutoImport', {
-          // targets to transform
-          include: [
-            /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-            /\.vue$/, /\.vue\?vue/, // .vue
-            /\.md$/, // .md
-          ],
-
-          // global imports to register
-          imports: [
-            // presets
-            'vue'
-          ],
-          eslintrc: {
-            enabled: false, // Default `false`
-            filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
-            globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
-          },
-        }]
->>>>>>> a90e4b6b42bae3c32c434aa19576b8e9cf17571d
       ]
     },
 
