@@ -14,10 +14,10 @@ describe( 'Basic Functionality', () => {
     expect(onClickSpy).toHaveBeenCalled()
   })
 
-/*   test('should demonstrate this matcher`s usage', async () => {
+  test('should demonstrate this matcher`s usage', async () => {
     const { container } = render(Primary({ label: 'Button'}))
     const results = await axe(container)
-  }) */
+  })
 
   //test.todo('boom')
 

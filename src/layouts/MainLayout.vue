@@ -33,6 +33,7 @@
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
+          class="text-green-400"
         />
       </q-list>
     </q-drawer>

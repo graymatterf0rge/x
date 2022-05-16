@@ -21,13 +21,13 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
-  components: MyButton,
+  components: { MyButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<MyButton data-testid="button" v-bind="args" />',
+  template: '<MyButton v-bind="args" />',
 });
 
 export const Primary = Template.bind({});
