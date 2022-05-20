@@ -11,7 +11,8 @@
 const UnoCSS = require('unocss/vite').default
 const { presetAttributify, presetUno } = require('unocss')
 const { configure } = require('quasar/wrappers')
-const { VueUseComponentsResolver } = require('unplugin-vue-components/resolvers')
+
+//const { VueUseComponentsResolver } = require('unplugin-vue-components/resolvers')
 //const Icons = require('unplugin-icons/vite').default
 //const { FileSystemIconLoader } = require('unplugin-icons/loaders')
 //const IconsResolver = require('unplugin-icons/resolver')
@@ -106,7 +107,7 @@ module.exports = configure(function ( ctx ) {
         [
           'unplugin-auto-import/vite',
           {
-            dts: 'false',
+            dts: false,
             imports: [
               'vue', 'vue-router'
             ],
@@ -115,7 +116,7 @@ module.exports = configure(function ( ctx ) {
         [
           'unplugin-vue-components/vite',
           {
-            //dts: 'src/components.d.ts',
+            dts: false,
             dirs: ['src/components', 'src/layouts', 'src/pages'],
             //resolvers: [VueUseComponentsResolver()],
           },

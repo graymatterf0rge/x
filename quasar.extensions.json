@@ -1,8 +1,8 @@
 {
   "@quasar/qcalendar": {},
   "@graymatterf0rge/qx": {
-    "scripts": true,
+    "scripts": false,
     "inlineCriticalCss": false,
-    "inlineCssFromSFC": true
+    "inlineCssFromSFC": false
   }
 }

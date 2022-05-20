@@ -1,20 +1,21 @@
 const { mergeConfig } = require('vite')
 const AutoImport = require('unplugin-auto-import/vite')
 
+
 const Unocss = require('unocss/vite');
 
 module.exports = {
   async viteFinal(config, { configType }) {
-    config.plugins.push([
-      AutoImport({
-        imports: [
-          'vue'
-        ]
-      })
-    ]);
-    // return the customized config
     return mergeConfig(config, {
-      // customize the Vite config here
+      plugins: [
+          AutoImport({
+            imports: [
+                'vue',
+                'vue-router',
+            ],
+            dts: 'src/auto-import.d.ts',
+          })
+      ],
       resolve: {
         alias: {
           path: require.resolve('path-browserify'),
@@ -22,7 +23,7 @@ module.exports = {
           stream: require.resolve("stream-browserify")
         }
       }
-    });
+    })
   },
   "stories": [
     "../__stories__/*.stories.mdx",
