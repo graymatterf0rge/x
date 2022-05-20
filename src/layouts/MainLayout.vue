@@ -36,6 +36,7 @@
           class="text-green-400"
         />
       </q-list>
+      <MyButton label="button" primary="true" />
     </q-drawer>
 
     <q-page-container>
@@ -45,7 +46,6 @@
 </template>
 
 <script>
-//import { defineComponent, ref } from 'vue'
 
 const linksList = [
   {
