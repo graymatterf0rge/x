@@ -107,7 +107,7 @@ module.exports = configure(function ( ctx ) {
         [
           'unplugin-auto-import/vite',
           {
-            dts: 'src/auto-import.d.ts',
+            dts: 'src/auto-imports.d.ts',
             imports: [
               'vue', 'vue-router'
             ],
