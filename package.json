@@ -16,8 +16,8 @@
     "prebuild:storybook": "yarn test:generate-output",
     "qxreset": "sh ./bin/qx-reset.sh",
     "prepare": "husky install",
-    "ghc": "gitmoji -c",
-    "commit": "commit"
+    "commit": "gitmoji -c",
+    "ghc": "commit"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
