@@ -16,7 +16,8 @@
     "prebuild:storybook": "yarn test:generate-output",
     "qxreset": "sh ./bin/qx-reset.sh",
     "prepare": "husky install",
-    "ghc": "gitmoji -c"
+    "ghc": "gitmoji -c",
+    "commit": "commit"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@commitlint/prompt-cli": "^17.0.0",
     "@etchteam/storybook-addon-status": "^4.2.1",
     "@graymatterf0rge/quasar-app-extension-qx": "file://home/b3457/qx",
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
