@@ -95,6 +95,8 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
