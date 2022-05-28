@@ -1221,6 +1221,16 @@
     "@commitlint/types" "^17.0.0"
     ajv "^6.12.6"
 
+"@commitlint/core@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/core/-/core-17.0.0.tgz#8869183cdc9ed553d005b6d96f05e6e87736ece0"
+  integrity sha512-BZKa0auLM3Q0b/+8+3KP7/7c8sQiDrqFgBY1cCBdsBShWFJ8gWzHCrFo20OoLIRXrWmoNpkPh6IJ5g+XG4EH4Q==
+  dependencies:
+    "@commitlint/format" "^17.0.0"
+    "@commitlint/lint" "^17.0.0"
+    "@commitlint/load" "^17.0.0"
+    "@commitlint/read" "^17.0.0"
+
 "@commitlint/ensure@^17.0.0":
   version "17.0.0"
   resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-17.0.0.tgz#781ff5f8870cb98ce4496d5c71649a4cd122a0e0"
