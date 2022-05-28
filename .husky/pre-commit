@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm test
+npx commitlint -e $HUSKY_GIT_PARAMS
 # npx lint-staged
