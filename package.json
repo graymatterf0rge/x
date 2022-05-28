@@ -90,5 +90,10 @@
     "*": "prettier --ignore-unknown --write",
     "*.css": "stylelint",
     "*.scss": "stylelint --syntax=scss"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
