@@ -100,10 +100,5 @@
   },
   "husky": {
     "hooks": {}
-  },
-  "commitlint": {
-    "extends": [
-      "gitmoji"
-    ]
   }
 }
