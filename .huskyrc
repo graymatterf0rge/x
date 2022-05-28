@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true",
+    "prepare-commit-msg": "exec < /dev/tty && yarn ghc --hook || true",
     "pre-commit": "lint-staged"
   }
 }
