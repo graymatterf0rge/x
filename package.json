@@ -103,8 +103,7 @@
   },
   "commitlint": {
     "extends": [
-      "gitmoji",
-      "@commitlint/config-conventional"
+      "gitmoji"
     ]
   }
 }
