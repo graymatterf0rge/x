@@ -17,7 +17,7 @@
     "qxreset": "sh ./bin/qx-reset.sh",
     "prepare": "husky install",
     "gcommit": "gitmoji -c",
-    "commit": "gitmoji -commit"
+    "commit": "git add . && cz"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@commitlint/core": "^17.0.0",
     "@commitlint/cz-commitlint": "^17.0.0",
@@ -59,10 +60,12 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.4",
+    "commitizen": "^4.2.4",
     "commitlint": "^17.0.0",
     "commitlint-config-gitmoji": "^2.2.5",
     "commitlint-plugin-gitmoji": "^2.2.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cz-customizable": "^6.3.0",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-storybook": "^0.5.12",
@@ -86,6 +89,11 @@
     "vite-plugin-inspect": "^0.5.0",
     "vue-loader": "^16.8.3",
     "vue3-jest": "^27.0.0-alpha.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "engines": {
     "node": "^18 || ^16 || ^14.19",
