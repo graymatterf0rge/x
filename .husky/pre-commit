@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npm test
+exec < /dev/tty
+
+# npx commitlint -e $HUSKY_GIT_PARAMS
+# npx lint-staged

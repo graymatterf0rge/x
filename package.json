@@ -14,7 +14,9 @@
     "tsb": "test-storybook",
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
     "prebuild:storybook": "yarn test:generate-output",
-    "qxreset": "sh ./bin/qx-reset.sh"
+    "qxreset": "sh ./bin/qx-reset.sh",
+    "prepare": "husky install",
+    "commit": "git add . && cz"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -28,6 +30,11 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/core": "^17.0.0",
+    "@commitlint/cz-commitlint": "^17.0.0",
+    "@commitlint/prompt-cli": "^17.0.0",
     "@etchteam/storybook-addon-status": "^4.2.1",
     "@graymatterf0rge/quasar-app-extension-qx": "file://home/b3457/qx",
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
@@ -52,14 +59,27 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.4",
+    "commitizen": "^4.2.4",
+    "commitlint": "^17.0.0",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "commitlint-plugin-gitmoji": "^2.2.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cz-customizable": "^6.3.0",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-storybook": "^0.5.12",
     "eslint-plugin-vue": "^8.5.0",
+    "execa": "^6.1.0",
+    "gitmoji-cli": "^5.0.0",
+    "husky": "^8.0.0",
     "jest": "^27.5.1",
     "jest-axe": "^6.0.0",
     "jest-image-snapshot": "^4.5.1",
+    "lint-staged": ">=10",
+    "ntl": "^5.1.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.5.1",
+    "stylelint": "^14.8.3",
     "typescript": "^4.6.4",
     "unocss": "^0.33.2",
     "unplugin-auto-import": "^0.7.1",
@@ -69,9 +89,24 @@
     "vue-loader": "^16.8.3",
     "vue3-jest": "^27.0.0-alpha.1"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
   "engines": {
     "node": "^18 || ^16 || ^14.19",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --cache --fix",
+    "*.gitignore": "prettier --write",
+    "*": "prettier --ignore-unknown --write",
+    "*.css": "stylelint",
+    "*.scss": "stylelint --syntax=scss"
+  },
+  "husky": {
+    "hooks": {}
   }
 }
