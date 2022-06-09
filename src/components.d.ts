@@ -5,11 +5,11 @@ import "@vue/runtime-core";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
+    _default: typeof import("./layouts/_default.vue")["default"];
     Default: typeof import("./layouts/default.vue")["default"];
     ErrorNotFound: typeof import("./pages/ErrorNotFound.vue")["default"];
     EssentialLink: typeof import("./components/EssentialLink.vue")["default"];
     Home: typeof import("./pages/Home.vue")["default"];
-    MainLayout: typeof import("./layouts/MainLayout.vue")["default"];
     MyButton: typeof import("./components/MyButton.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];

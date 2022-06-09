@@ -20,5 +20,11 @@
     "generatorConfig": {
       "nested": true
     }
+  },
+  "@vueauth/auth": {
+    "authProvider": {
+      "identifier": "supabase",
+      "packageName": "@vueauth/supabase"
+    }
   }
 }
