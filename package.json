@@ -16,7 +16,9 @@
     "prebuild:storybook": "yarn test:generate-output",
     "qxreset": "sh ./bin/qx-reset.sh",
     "prepare": "husky install",
-    "commit": "git add . && cz"
+    "commit": "git add . && cz",
+    "build:ssg": "quasar ssg generate",
+    "serve:ssg": "quasar ssg serve dist/ssg"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -25,7 +27,9 @@
     "quasar": "^2.6.0",
     "vue": "^3.2.31",
     "vue-i18n": "^9.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "@supabase/supabase-js": "^1.28.5",
+    "@vueauth/supabase": "^1.0.0-alpha.20"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -55,6 +59,7 @@
     "@testing-library/vue": "^6.5.1",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/vue3-jest": "^27.0.0-alpha.4",
+    "@vueauth/quasar-app-extension-auth": "^1.0.0-alpha.29",
     "autoprefixer": "^10.4.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.5.1",
@@ -79,6 +84,7 @@
     "ntl": "^5.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^2.5.1",
+    "quasar-app-extension-auto-routing": "^0.0.31",
     "stylelint": "^14.8.3",
     "typescript": "^4.6.4",
     "unocss": "^0.33.2",
@@ -86,6 +92,7 @@
     "unplugin-icons": "^0.14.3",
     "unplugin-vue-components": "^0.19.5",
     "vite-plugin-inspect": "^0.5.0",
+    "vite-plugin-webpackchunkname": "^0.0.12",
     "vue-loader": "^16.8.3",
     "vue3-jest": "^27.0.0-alpha.1"
   },
@@ -105,8 +112,5 @@
     "*": "prettier --ignore-unknown --write",
     "*.css": "stylelint",
     "*.scss": "stylelint --syntax=scss"
-  },
-  "husky": {
-    "hooks": {}
   }
 }
