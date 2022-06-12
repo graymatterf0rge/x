@@ -112,8 +112,5 @@
     "*": "prettier --ignore-unknown --write",
     "*.css": "stylelint",
     "*.scss": "stylelint --syntax=scss"
-  },
-  "husky": {
-    "hooks": {}
   }
 }

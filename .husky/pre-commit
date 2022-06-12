@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# ensure all tests are passing
 npm test
+# fix any formatting or style issues with the changed files
 npx lint-staged
+# allow for user input during the interactive commit message prompt
 exec < /dev/tty
 
-# npx commitlint -e $HUSKY_GIT_PARAMS
-# npx lint-staged
