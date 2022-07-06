@@ -32,7 +32,7 @@
     "vue": "^3.2.31",
     "vue-i18n": "^9.0.0",
     "vue-router": "^4.0.0",
-    "firebase": "^9.0.0",
+    "firebase": "^9.8.4",
     "@vueauth/firebase": "^1.0.0-alpha.20"
   },
   "devDependencies": {
@@ -118,8 +118,7 @@
     "yarn": ">= 1.21.1"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --cache --fix",
-    "*.gitignore": "prettier --write",
+    "*.{js,vue}": "eslint --cache --fix --ignore-path .gitignore",
     "*": "prettier --ignore-unknown --write",
     "*.css": "stylelint",
     "*.scss": "stylelint --syntax=scss"

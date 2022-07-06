@@ -1,6 +1,6 @@
 export default {
   credentials: {
-    apiKey: "AIzaSyC31dwAs9tTVBpKALdAduJ-lShN0oxfnMA",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "rx-4-dx.firebaseapp.com",
     projectId: "rx-4-dx",
     storageBucket: "rx-4-dx.appspot.com",
