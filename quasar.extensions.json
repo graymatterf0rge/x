@@ -23,8 +23,8 @@
   },
   "@vueauth/auth": {
     "authProvider": {
-      "identifier": "supabase",
-      "packageName": "@vueauth/supabase"
+      "identifier": "firebase",
+      "packageName": "@vueauth/firebase"
     }
   }
 }

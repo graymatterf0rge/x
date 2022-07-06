@@ -32,17 +32,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { getDefaultProvider } from "@vueauth/core";
-import AuthAccountMenu from "src/auth/components/AccountMenu/AccountMenu.vue";
+import AuthAccountMenu from "../auth/components/AccountMenu/AccountMenu.vue";
 
-const leftDrawerOpen = ref(false);
+const leftDrawerOpen = $ref(false);
 
 const authProvider = getDefaultProvider();
 const authProviderUpperFirst =
   authProvider.charAt(0).toUpperCase() + authProvider.slice(1);
 
 function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
+  leftDrawerOpen = !leftDrawerOpen;
 }
 </script>

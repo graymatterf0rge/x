@@ -31,7 +31,9 @@
     "quasar": "^2.6.0",
     "vue": "^3.2.31",
     "vue-i18n": "^9.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "firebase": "^9.0.0",
+    "@vueauth/firebase": "^1.0.0-alpha.20"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -62,6 +64,7 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/vue3-jest": "^27.0.0-alpha.4",
     "@vueauth/quasar-app-extension-auth": "^1.0.0-alpha.29",
+    "algoliasearch": "^4.13.1",
     "autoprefixer": "^10.4.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.5.1",
@@ -79,6 +82,7 @@
     "eslint-plugin-storybook": "^0.5.12",
     "eslint-plugin-vue": "^8.5.0",
     "execa": "^6.1.0",
+    "firebase": "^9.8.4",
     "gitmoji-cli": "^5.0.0",
     "husky": "^8.0.0",
     "jest": "^27.5.1",
@@ -99,6 +103,7 @@
     "unplugin-vue-components": "^0.19.5",
     "vite-plugin-inspect": "^0.5.0",
     "vue-feature-toggle": "^2.0.6",
+    "vue-instantsearch": "^4.4.0",
     "vue-loader": "^16.8.3",
     "vue3-jest": "^27.0.0-alpha.1"
   },
@@ -108,7 +113,7 @@
     }
   },
   "engines": {
-    "node": "^18 || ^16 || ^14.19",
+    "node": "16.15.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   },
