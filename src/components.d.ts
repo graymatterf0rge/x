@@ -6,15 +6,18 @@ import "@vue/runtime-core";
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     _default: typeof import("./layouts/_default.vue")["default"];
+    AuthenticatedLayout: typeof import("./layouts/AuthenticatedLayout.vue")["default"];
     Default: typeof import("./layouts/default.vue")["default"];
     ErrorNotFound: typeof import("./pages/ErrorNotFound.vue")["default"];
     EssentialLink: typeof import("./components/EssentialLink.vue")["default"];
+    Feature: typeof import("./components/Feature.vue")["default"];
     Home: typeof import("./pages/Home.vue")["default"];
     MyButton: typeof import("./components/MyButton.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
     Test: typeof import("./pages/Test.vue")["default"];
     TestLayout: typeof import("./layouts/TestLayout.vue")["default"];
+    UserDashboard: typeof import("./pages/UserDashboard.vue")["default"];
   }
 }
 

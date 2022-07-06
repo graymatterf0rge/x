@@ -36,7 +36,7 @@ module.exports = configure(function (ctx) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
-    boot: ["i18n", "axios", "unocss"],
+    boot: ["i18n", "axios", "firebase", "unocss"],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ["app.scss"],
@@ -79,16 +79,19 @@ module.exports = configure(function (ctx) {
       // distDir
       alias: {
         layouts: path.join(__dirname, "./src/layouts"),
+        auth: path.join(__dirname, ".src/auth"),
       },
       extendViteConf(viteConf, { isClient, isServer }) {
-        viteConf.plugins.push(
+        viteConf.plugins.push([
           ...UnoCSS({
             presets: [presetUno(), presetAttributify()],
           }),
-          require("vite-plugin-webpackchunkname").default
-        );
+          //require("vite-plugin-webpackchunkname").default
+        ]);
       },
-      // viteVuePluginOptions: {},
+      viteVuePluginOptions: {
+        reactivityTransform: true,
+      },
 
       vitePlugins: [
         [

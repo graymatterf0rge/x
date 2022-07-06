@@ -5,8 +5,4 @@
   </q-page>
 </template>
 
-<script>
-export default {
-  name: "Test",
-};
-</script>
+<script setup></script>

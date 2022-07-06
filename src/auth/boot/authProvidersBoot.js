@@ -1,8 +1,8 @@
 import { boot } from "quasar/wrappers";
 import { AuthPlugin } from "@vueauth/core";
-import supabaseConfig from "app/config/supabase";
+import firebaseConfig from "app/config/firebase";
 import {
-  SupabasePlugin,
+  FirebasePlugin,
   useIdentityPasswordRegister,
   useIdentityPasswordLogin,
   useIdentityPasswordLogout,
@@ -14,15 +14,15 @@ import {
   useFetchUser,
   usePasswordResetViaEmail,
   useUpdatePassword,
-} from "@vueauth/supabase";
+} from "@vueauth/firebase";
 
 export default boot(({ app }) => {
-  app.use(SupabasePlugin, supabaseConfig); // Be sure to update config/supabase to configure your app!
+  app.use(FirebasePlugin, firebaseConfig); // Be sure to update config/firebase to configure your app!
 
   app.use(AuthPlugin, {
-    default: "supabase",
+    default: "firebase",
     providers: {
-      supabase: {
+      firebase: {
         features: {
           "identityPassword:register": useIdentityPasswordRegister,
           "identityPassword:login": useIdentityPasswordLogin,
