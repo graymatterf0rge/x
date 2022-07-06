@@ -15,7 +15,6 @@ module.exports = {
   extends: [
     "plugin:vue/vue3-essential",
     "prettier",
-    "plugin:storybook/recommended",
   ],
   plugins: [
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files

@@ -2,6 +2,7 @@
 /src-capacitor
 /src-cordova
 /.quasar
+/.vitebook
 /node_modules
 .eslintrc.js
 /src/router/auto-routing
