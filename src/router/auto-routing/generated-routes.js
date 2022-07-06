@@ -10,6 +10,11 @@ function Home() {
 function Test() {
   return import(/* webpackChunkName: "Test" */ "pages/Test.vue");
 }
+function UserDashboard() {
+  return import(
+    /* webpackChunkName: "UserDashboard" */ "pages/UserDashboard.vue"
+  );
+}
 
 export default [
   {
@@ -26,5 +31,10 @@ export default [
     name: "Test",
     path: "Test",
     component: Test,
+  },
+  {
+    name: "UserDashboard",
+    path: "UserDashboard",
+    component: UserDashboard,
   },
 ];

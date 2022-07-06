@@ -81,14 +81,16 @@ module.exports = configure(function (ctx) {
         layouts: path.join(__dirname, "./src/layouts"),
       },
       extendViteConf(viteConf, { isClient, isServer }) {
-        viteConf.plugins.push(
+        viteConf.plugins.push([
           ...UnoCSS({
             presets: [presetUno(), presetAttributify()],
           }),
-          require("vite-plugin-webpackchunkname").default
-        );
+          //require("vite-plugin-webpackchunkname").default
+        ]);
       },
-      // viteVuePluginOptions: {},
+      viteVuePluginOptions: {
+        reactivityTransform: true,
+      },
 
       vitePlugins: [
         [
