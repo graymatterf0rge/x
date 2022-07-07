@@ -86,7 +86,6 @@ module.exports = configure(function (ctx) {
           ...UnoCSS({
             presets: [presetUno(), presetAttributify()],
           }),
-          //require("vite-plugin-webpackchunkname").default
         ]);
       },
       viteVuePluginOptions: {
