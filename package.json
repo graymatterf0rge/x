@@ -25,15 +25,15 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "@supabase/supabase-js": "^1.28.5",
+    "@vueauth/firebase": "^1.0.0-alpha.20",
     "@vueauth/supabase": "^1.0.0-alpha.20",
     "axios": "^0.21.1",
+    "firebase": "^9.8.4",
     "pinia": "^2.0.11",
     "quasar": "^2.6.0",
     "vue": "^3.2.31",
     "vue-i18n": "^9.0.0",
-    "vue-router": "^4.0.0",
-    "firebase": "^9.8.4",
-    "@vueauth/firebase": "^1.0.0-alpha.20"
+    "vue-router": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -104,6 +104,7 @@
     "vite-plugin-inspect": "^0.5.0",
     "vue-feature-toggle": "^2.0.6",
     "vue-instantsearch": "^4.4.0",
+    "vue-json-search": "^0.2.1",
     "vue-loader": "^16.8.3",
     "vue3-jest": "^27.0.0-alpha.1"
   },

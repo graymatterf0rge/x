@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "599654106655",
+    "project_id": "petsboutiqueauth-bbb2d",
+    "storage_bucket": "petsboutiqueauth-bbb2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599654106655:android:c15620b3e5a78b97dcb72a",
+        "android_client_info": {
+          "package_name": "com.pets.boutique"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599654106655-66ck7ollr8jp4dcvqgq48no1u2kh8dcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC90rpWJ4flrbnqK9biA5O5--c99pZK2tU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599654106655-66ck7ollr8jp4dcvqgq48no1u2kh8dcr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "599654106655-6gt9h7vqsrrhsp2cl8jn48jodo128que.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thepetboutique.petbo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

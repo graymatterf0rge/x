@@ -4,7 +4,7 @@
 # ensure all tests are passing
 npm test
 # fix any formatting or style issues with the changed files
-npx lint-staged
+# npx lint-staged
 # allow for user input during the interactive commit message prompt
 exec < /dev/tty
 

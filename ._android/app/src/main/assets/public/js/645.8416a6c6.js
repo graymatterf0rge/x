@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkPetBoutique"]=self["webpackChunkPetBoutique"]||[]).push([[645],{645:(e,u,t)=>{t.r(u),t.d(u,{default:()=>r});var s=t(2494);const i={setup(e){return(e,u)=>((0,s.wg)(),(0,s.iD)("div"))}},r=i}}]);

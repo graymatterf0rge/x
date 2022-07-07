@@ -1,0 +1,27 @@
+[
+  {
+    "href": "favicon.ico",
+    "size": 64483,
+    "integrity": "sha256-2ZcJaY/4le4w5NSBzWjaj3yk1faLAX0XqioI+Tjscbs= sha384-UFnjjWwdtxb/RRhY3DqV61feruaIdWJU7kS5TD/OVeW/IAubg2f339BuZYJqWaKS sha512-bwD2cRyCsSH15hyr4EHhWH3l6xOgXgKyWG4w/zgPS6dq2GpQK/ITWIKoy1PsR8MCyuSTK5oXcp03E3c01GreIA=="
+  },
+  {
+    "href": "icons/favicon-128x128.png",
+    "size": 12324,
+    "integrity": "sha256-zmGg0n6RZ5OM4gg+E5HeHuUUtA2KD1w2AqegT0SfZ3k= sha384-vQ43U5nO2B50Bc7pSZ4I41u4I0m+SqK9X2xjlCPHFEOsB8c7dS1aISdj/WH0qtze sha512-xI5U977+W9lnAd919phVx2TUozaS6VBncKqRPAKJ/QonhDW8uroNrQ42kdNET40uePraF+Y8VriWye4ujc89QQ=="
+  },
+  {
+    "href": "icons/favicon-16x16.png",
+    "size": 859,
+    "integrity": "sha256-3ynBFHJjwaUFKcZVC2rBs27b82r64dmcvfFzEo52+sU= sha384-L429reT0xRIqIx4OOBJsMmv42cDKeLpwo0lAI8yXdTGAi4cjFoLMwRiGOyak7Z9g sha512-WDbsJQiFzyXT5Dv9oEZpg575rces8ekUT9TXVaHgo/vFA8WLJ158zBlQsf6h6imx8FTYfKEhUnrh1jkUlRRhPg=="
+  },
+  {
+    "href": "icons/favicon-32x32.png",
+    "size": 2039,
+    "integrity": "sha256-lhGXZOqIhjcKDymmbKyo4mrVmKY055LMD5GO9eW2Qjk= sha384-/DguHbYFTNzhxVLYGmpB7YGvL2AAa50d2a90WZRJObdwwA2mOLuePdirzCWHhEw+ sha512-ug8XUhfv8F1CS6spksbb4TR8ExnvAt/8n1PYjHDDIQfBxWQpeVv+8tnZNf8yPKTT+BGV2eQLZCsy3WtND+Ibzw=="
+  },
+  {
+    "href": "icons/favicon-96x96.png",
+    "size": 9643,
+    "integrity": "sha256-0PbP5YF01VHbwwP8z7z8jjltQ0q343C1wpjxWjj47rY= sha384-Una7w+C9lzuHKRZ8Er3fvxI0i+n+9wj4ln0lXTDA84RrGOjKrszaTeMshzodLV4P sha512-NfkWXGNleT/SGEG5sMsgBRrXR34g2tUXM24llNvcL4nc8Ts51dIBFnxU08gsPRU3U48CFPzYwAXs/LE5EDxSjw=="
+  }
+]

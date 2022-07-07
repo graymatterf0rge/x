@@ -1,0 +1,15 @@
+{
+	"appId": "com.pets.boutique",
+	"appName": "PetBoutiqueApp",
+	"webDir": "dist/spa",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"FirebaseAuthentication": {
+			"skipNativeAuth": true,
+			"providers": [
+				"google.com",
+				"facebook.com"
+			]
+		}
+	}
+}
