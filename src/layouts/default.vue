@@ -18,18 +18,7 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <JsonSearch :show-tags="true" v-slot="{ results }">
-        <SearchInput />
-        <SearchResults>
-          <ResultTitle />
-          <div v-for="res in results" :key="res.refIndex">
-            <ResultListItem v-slot="{ result }" :result="res.item">
-              <p>Title: {{ result.title }}</p>
-              <p>Tags: {{ result.tags }}</p>
-            </ResultListItem>
-          </div>
-        </SearchResults>
-      </JsonSearch>
+      <json-search />
       <q-list>
         <q-item-label class="text-green-400 test-class">
           Essential Links
@@ -52,7 +41,7 @@
 </template>
 
 <script setup>
-import { JsonSearch, ResultList, ResultListItem, ResultTitle, SearchInput, SearchResults } from 'vue-json-search'
+import { JsonSearch } from 'vue-json-search';
 const essentialLinks = [
   {
     title: "Docs",
@@ -103,7 +92,7 @@ const essentialLinks = [
 
 
      const toggleLeftDrawer = () => {
-        leftDrawerOpen = !leftDrawerOpen.value;
+        leftDrawerOpen = !leftDrawerOpen;
       }
 
 

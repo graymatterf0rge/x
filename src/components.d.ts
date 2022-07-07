@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     Feature: typeof import('./components/Feature.vue')['default']
     Home: typeof import('./pages/Home.vue')['default']
     Item: typeof import('./components/Item.vue')['default']
+    JsonSearch: typeof import('./components/JsonSearch.vue')['default']
     KanBan: typeof import('./components/recycle bin/KanBan.vue')['default']
     Month: typeof import('./components/recycle bin/Month.vue')['default']
     'Month copy': typeof import('./components/recycle bin/Month copy.vue')['default']
