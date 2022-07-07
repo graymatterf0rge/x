@@ -1,0 +1,12 @@
+{
+  "appId": "com.vitamin.x",
+  "appName": "VitaminX",
+  "webDir": "dist/spa",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "FirebaseAuthentication": {
+      "skipNativeAuth":true,
+      "providers": ["google.com","facebook.com"]
+    }
+  }
+}

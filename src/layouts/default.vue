@@ -18,6 +18,7 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <json-search />
       <q-list>
         <q-item-label class="text-green-400 test-class">
           Essential Links
@@ -39,8 +40,9 @@
   </q-layout>
 </template>
 
-<script>
-const linksList = [
+<script setup>
+import { JsonSearch } from 'vue-json-search';
+const essentialLinks = [
   {
     title: "Docs",
     caption: "quasar.dev",
@@ -85,18 +87,14 @@ const linksList = [
   },
 ];
 
-export default defineComponent({
-  name: "MainLayout",
-  setup() {
-    const leftDrawerOpen = ref(false);
 
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
-    };
-  },
-});
+    let leftDrawerOpen = $ref(false)
+
+
+     const toggleLeftDrawer = () => {
+        leftDrawerOpen = !leftDrawerOpen;
+      }
+
+
+
 </script>

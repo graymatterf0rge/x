@@ -5,11 +5,6 @@
     "inlineCriticalCss": false,
     "inlineCssFromSFC": false
   },
-  "ssg": {
-    "scripts": true,
-    "inlineCriticalCss": true,
-    "inlineCssFromSFC": true
-  },
   "auto-routing": {
     "pagesDir": "src/pages",
     "routePrefix": "",

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Quasar App</string>
+    <string name="title_activity_main">Quasar App</string>
+    <string name="package_name">org.capacitor.quasar.app</string>
+    <string name="custom_url_scheme">org.capacitor.quasar.app</string>
+    <string name="facebook_app_id">411897325492959</string>
+    <string name="facebook_client_token">7485a0fe04dcef68dcb0ba71648acd37</string>
+</resources>
